@@ -2,10 +2,13 @@
 appengine-generated/
 
 # virtualenv directory
-env/
+venv/
 
 # node_modules
 node_modules/
+
+# yarn
+yarn.lock
 
 # python
 __pycache__
@@ -13,3 +16,7 @@ __pycache__
 
 # webpack
 bundle.js
+
+# vim
+.swp
+.swo
