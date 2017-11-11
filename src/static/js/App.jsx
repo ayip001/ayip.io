@@ -1,9 +1,17 @@
 // App.jsx
 
 import React from "react";
+import Hello from "./Hello";
+import { PageHeader } from "react-bootstrap";
 
 export default class App extends React.Component {
-    render () {
-        return <p> Under construction... Contact me at <a href="mailto:info@ayip.io">info@ayip.io</a> for more info.</p>;
+    render() {
+        return (
+            <PageHeader>
+                <div className="header-contents">
+                    <Hello name="Rimini" />
+                </div>
+            </PageHeader>
+        );
     }
 }

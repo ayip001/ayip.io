@@ -18,5 +18,5 @@ __pycache__
 bundle.js
 
 # vim
-.swp
+*.swp
 .swo
