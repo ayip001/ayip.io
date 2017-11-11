@@ -1,14 +1,17 @@
 # Makefile
 
-VENV="virtualenv"
-VENV_DIR="venv"
+VENV=virtualenv
+VENV_DIR=src/venv
 
 # NODE_PKGMGR=yarn --modules-folder
 NODE_PKGMGR=npm --prefix
-NODE_DIR="src/static"
+NODE_DIR=src/static
 
-SERVER_DIR="src/server/"
-SERVER="server.py"
+SERVER_DIR=src/server/
+SERVER=server.py
+
+REQ_DIR=src/
+REQ=requirements.txt
 
 all: venv deps
 
@@ -16,7 +19,7 @@ venv:
 	test -d venv || ($(VENV) $(VENV_DIR) || true)
 
 deps:
-	$(VENV_DIR)/bin/pip install -Ur requirements.txt
+	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ)
 	$(NODE_PKGMGR) $(NODE_DIR) install
 
 server:

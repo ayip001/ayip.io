@@ -19,7 +19,7 @@ export default class Hello extends React.Component {
     }
 
     getPythonHello() {
-        $.get(window.location.href + 'hello', (data) => {
+        $.get('hello', (data) => {
             console.log(data);
             this.personalizeGreeting(data);
         });
@@ -30,7 +30,7 @@ export default class Hello extends React.Component {
             <div>
                 <h1>{this.state.greeting}</h1>
                 <hr/>
-                <Button bsSize="large" bsStyle="danger" onClick="{this.getPythonHello}">
+                <Button bsSize="large" bsStyle="danger" onClick={this.getPythonHello}>
                     Say Hello!
                 </Button>
             </div>
