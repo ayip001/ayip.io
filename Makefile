@@ -10,7 +10,7 @@ NODE_DIR="src/static"
 SERVER_DIR="src/server/"
 SERVER="server.py"
 
-setup: venv deps
+all: venv deps
 
 venv:
 	test -d venv || ($(VENV) $(VENV_DIR) || true)
@@ -27,3 +27,5 @@ watch:
 
 fclean:
 	rm -rf $(VENV_DIR) $(NODE_DIR)/node_modules
+
+re: fclean all

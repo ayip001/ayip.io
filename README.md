@@ -1,12 +1,11 @@
-# ayip.io
----
-### Under construction!
+<h1>ayip.io</h1>
+<h3>Under construction!</h3>
 ---
 Hosted on Google Cloud Platform  
-Bootstrap - React.js - Python Flask  
-### Setup
+| Bootstrap | React.js | Python Flask |  
+<h3>Setup</h3>
 ---
-`./setup.sh` for the virtualenv and npm setup  
-`source env/bin/activate`  
-`python server/server.py` to start the flask server  
-`cd static && npm run watch` to run the webpack  
+`make` to setup the python virtual environment and install node modules  
+`make watch` to setup the Webpack watcher  
+`make server` to start the python server  
+See the Makefile for their cli equivalent  
