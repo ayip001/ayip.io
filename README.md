@@ -1,11 +1,22 @@
-<h1>ayip.io</h1>
-<h3>Under construction!</h3>
+<h1 align="center"><a href="https://ayip.io">ayip.io</a></h1>
+<h3 align="center">🚧Under construction🚧</h3>
+
+### Stuff used to make this
 ---
-Hosted on Google Cloud Platform  
-| Bootstrap | React.js | Python Flask |  
-<h3>Setup</h3>
+* Google Cloud Platform
+* Flask
+* Gunicorn
+* Node-js
+* babel
+* ReactJS
+* Webpack
+* Bootstrap
+### Setup
 ---
 `make` to setup the python virtual environment and install node modules  
 `make watch` to setup the Webpack watcher  
-`make server` to start the python server  
-See the Makefile for their cli equivalent  
+`make server` to start the Flask server  
+See the [Makefile](Makefile) for their cli equivalent 
+### License
+---
+* [MIT](LICENSE)
