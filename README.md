@@ -1,4 +1,4 @@
-<h1 align="center"><a href="ayip.io">ayip.io</a></h1>
+<h1 align="center"><a href="https://ayip.io">ayip.io</a></h1>
 <h3 align="center">🚧Under construction🚧</h3>
 
 ### Stuff used to make this
