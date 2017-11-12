@@ -16,14 +16,15 @@ def get_hello():
     return random.choice(greeting_list)
 
 @app.route("/")
+@app.route("/index")
 def construction():
     return render_template("construction.html")
 
-@app.route("/index")
-def index():
-    return render_template("index.html")
-
 @app.route("/hello")
+def index():
+    return render_template("hello.html")
+
+@app.route("/api/hello")
 def hello():
     return get_hello()
 

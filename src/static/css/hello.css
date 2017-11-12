@@ -1,0 +1,25 @@
+.page-header{
+	min-height: 100%;
+	text-align: center;
+	background-image: url('../images/hello_bg.jpg');
+}
+
+.header-contents {
+	top: 50%;
+	position: absolute;
+}
+
+.header-contents h1 {
+	font-size: 120px;
+	font-weight: 300;
+}
+
+.header-contents button {
+	border-radius: 35px;
+	font-size: 35px;
+	font-weight: 300;
+}
+
+.header-contents button:focus {
+	outline: None;
+}

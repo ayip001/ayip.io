@@ -10,6 +10,7 @@
 * Flask
 * Gunicorn
 * Node-js
+* jQuery
 * babel
 * ReactJS
 * Webpack
