@@ -1,4 +1,4 @@
-# Makefile
+# ./Makefile
 
 VENV=virtualenv
 VENV_DIR=src/venv

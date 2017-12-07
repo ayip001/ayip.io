@@ -1,32 +1,15 @@
-# server.py
+# ./src/server/server.py
 from flask import Flask, render_template
-import random
 
 app = Flask(__name__, static_folder="../static/dist", template_folder="../static/templates")
 
-def get_hello():
-    greeting_list = [
-        'Ciao',
-        'Hei',
-        'Salut',
-        'Hola',
-        'Hallo',
-        'Hej'
-    ]
-    return random.choice(greeting_list)
-
 @app.route("/")
-@app.route("/index")
 def construction():
     return render_template("construction.html")
 
-@app.route("/hello")
+@app.route("/index")
 def index():
-    return render_template("hello.html")
-
-@app.route("/api/hello")
-def hello():
-    return get_hello()
+    return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    app.run(host='127.0.0.1', port=8080, debug=True)

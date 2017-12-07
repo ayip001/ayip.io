@@ -1,3 +1,4 @@
+<!-- ./README.md -->
 <h1 align="center"><a href="https://ayip.io">ayip.io</a></h1>
 <h3 align="center">🚧Under construction🚧</h3>
 
@@ -9,9 +10,9 @@
 * Google Cloud Platform
 * Flask
 * Gunicorn
-* Node-js
-* jQuery
+* Node.js
 * babel
+* jQuery
 * ReactJS
 * Webpack
 * Bootstrap
