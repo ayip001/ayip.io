@@ -9,13 +9,12 @@
 ---
 * Google Cloud Platform
 * Flask
-* Gunicorn
 * Node.js
 * babel
 * jQuery
 * ReactJS
 * Webpack
-* Bootstrap
+* Paper-CSS
 ### Setup
 ---
 `make` to setup the python virtual environment and install node modules  
