@@ -28,6 +28,6 @@ watch:
 	$(NODE_PKGMGR) $(NODE_DIR) run watch
 
 fclean:
-	rm -rf $(VENV_DIR) $(NODE_DIR)/node_modules
+	rm -rf $(VENV_DIR) $(NODE_DIR)/node_modules $(REQ_DIR)lib
 
 re: fclean all
