@@ -18,7 +18,10 @@ venv:
 	test -d venv || ($(VENV) $(VENV_DIR) || true)
 
 deps:
+	# for Google App Engine
 	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ) -t $(REQ_DIR)lib
+	# for local development environment
+	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ)
 	$(NODE_PKGMGR) $(NODE_DIR) install
 
 server:
