@@ -3,6 +3,7 @@ appengine-generated/
 
 # virtualenv directory
 venv/
+lib/
 
 # node_modules
 node_modules/

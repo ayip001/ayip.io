@@ -1,5 +1,4 @@
 # ./Makefile
-
 VENV=virtualenv
 VENV_DIR=src/venv
 
@@ -19,7 +18,7 @@ venv:
 	test -d venv || ($(VENV) $(VENV_DIR) || true)
 
 deps:
-	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ)
+	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ) -t $(REQ_DIR)lib
 	$(NODE_PKGMGR) $(NODE_DIR) install
 
 server:
