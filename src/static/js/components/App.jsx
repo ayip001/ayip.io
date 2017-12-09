@@ -1,9 +1,12 @@
 // ./src/static/js/components/App.jsx
 import React from 'react'
+import Header from './Header'
+import Main from './Main'
 
 const App = () => (
   <div>
-    <h1>react!</h1>
+    <Header />
+    <Main />
   </div>
 )
 
