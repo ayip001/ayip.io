@@ -11,6 +11,7 @@ SERVER=server.py
 
 REQ_DIR=src/
 REQ=requirements.txt
+REQ_DEV=requirements_dev.txt
 
 all: venv deps
 
@@ -21,7 +22,7 @@ deps:
 	# for Google App Engine
 	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ) -t $(REQ_DIR)lib
 	# for local development environment
-	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ)
+	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ_DEV)
 	$(NODE_PKGMGR) $(NODE_DIR) install
 
 server:
