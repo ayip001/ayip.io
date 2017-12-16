@@ -11,7 +11,7 @@ SERVER=server.py
 
 REQ_DIR=src/
 REQ=requirements.txt
-REQ_DEV=requirements_dev.txt
+REQ_DEV=requirements.txt
 
 all: venv deps
 
