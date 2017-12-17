@@ -7,7 +7,7 @@ client = datastore.Client()
 
 class AllPostsAPI(Resource):
     def get(self):
-        query = client.query(kind='Post')
+        query = client.query(kind='Post', order=['-date'])
         query.add_filter('public', '=', True)
         return jsonify(list(query.fetch()))
 
