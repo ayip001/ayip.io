@@ -1,0 +1,21 @@
+--- src/venv/lib/python3.6/site-packages/requests/models.py	2017-12-19 05:12:08.387025356 -0800
++++ src/lib/requests/models.py	2017-12-19 05:21:08.333796614 -0800
+@@ -654,8 +654,16 @@
+             # Special case for urllib3.
+             if hasattr(self.raw, 'stream'):
+                 try:
+-                    for chunk in self.raw.stream(chunk_size, decode_content=True):
+-                        yield chunk
++                    # Special case for Google App Engine
++                    if isinstance(self.raw._original_response._method, int):
++                        while True:
++                            chunk = self.raw.read(chunk_size, decode_content=True)
++                            if not chunk:
++                                break
++                            yield chunk
++                    else:
++                        for chunk in self.raw.stream(chunk_size, decode_content=True):
++                            yield chunk
+                 except ProtocolError as e:
+                     raise ChunkedEncodingError(e)
+                 except DecodeError as e:

@@ -24,6 +24,8 @@ deps:
 	# for local development environment
 	$(VENV_DIR)/bin/pip install -Ur $(REQ_DIR)$(REQ_DEV)
 	$(NODE_PKGMGR) $(NODE_DIR) install
+	# Patch requests for GAE
+	patch -p0 < requests-models-py.patch
 
 server:
 	$(VENV_DIR)/bin/python $(SERVER_DIR)$(SERVER)

@@ -21,8 +21,9 @@ class AllPostsAPI(Resource):
 class PostAPI(Resource):
     def get(self, title):
         query = QueryHelper()
-        query.add_filter('title', '=', title)
-        result = list(query.fetch())
+        fetched = query.fetch()
+        result = list(
+            post for post in fetched if title == post['title'])
         if len(result) == 0:
             abort(404)
         return jsonify(result[0])
