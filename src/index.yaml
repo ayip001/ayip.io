@@ -1,5 +1,10 @@
 # ./src/index.yaml
+# Use the command:
+# gcloud app deploy index.yaml
+# to update Google Cloud Datastore indexies
 indexes:
 - kind: Post
   properties:
-  - name: -date
+  - name: public
+  - name: date
+    direction: desc
