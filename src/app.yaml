@@ -1,4 +1,7 @@
 # ./src/app.yaml
+# When deploying to Google App Engine with command:
+# gcloud app deploy
+# This file will be parsed as a configuration file and is mandatory
 runtime: python27
 api_version: 1
 threadsafe: true
