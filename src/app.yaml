@@ -10,6 +10,10 @@ handlers:
 - url: /.*
   script: server.server.app
 
+libraries:
+- name: ssl
+  version: latest
+
 skip_files:
 - static/node_modules/
 - venv/
