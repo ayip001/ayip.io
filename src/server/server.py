@@ -11,12 +11,9 @@ app = Flask(
         template_folder="../static/templates")
 api = Api(app)
 
-@app.route("/")
-def construction():
-    return render_template("construction.html")
-
-@app.route("/index")
-def index():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def index(path):
     return render_template("index.html")
 
 # APIs for retriving posts

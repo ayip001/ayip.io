@@ -1,12 +1,15 @@
 // ./src/static/js/components/App.jsx
 import React from 'react'
-import Header from './Header'
+import { Switch, Route } from 'react-router-dom'
+import Home from './Home'
 import Main from './Main'
 
 const App = () => (
   <div>
-    <Header />
-    <Main />
+    <Switch>
+      <Route exact path='/' component={Home}/>
+      <Route component={Main}/>
+    </Switch>
   </div>
 )
 
