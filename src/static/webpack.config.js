@@ -1,11 +1,13 @@
+const { resolve } = require('path');
 const webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    entry: __dirname + '/js/index.jsx',
+    entry: resolve(__dirname, 'js') + '/index.jsx',
     output: {
-        path: __dirname + '/dist',
         filename: 'bundle.js',
+        path: resolve(__dirname, 'dist'),
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.js', '.jsx', '.css']
@@ -34,5 +36,6 @@ const config = {
         new ExtractTextPlugin('styles.css'),
     ]
 };
+
 
 module.exports = config;
