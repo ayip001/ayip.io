@@ -1,4 +1,4 @@
-// ./src/static/js/index.jsx
+// ./src/static/js/index.js
 import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
