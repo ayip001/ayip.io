@@ -7,14 +7,13 @@
 *\*notices personal website\**  
 ### Stuff used to make this
 ---
-* Google Cloud Platform
+* Google App Engine
+* Google Datastore
 * Flask
 * Node.js
 * babel
-* jQuery
 * ReactJS
 * Webpack
-* Paper-CSS
 ### Setup
 ---
 `make` to setup the python virtual environment and install node modules  
