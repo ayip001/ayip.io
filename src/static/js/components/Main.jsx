@@ -10,7 +10,7 @@ const Main = () => (
     <Header />
     <Switch>
       <Route path='/blog' component={Blog}/>
-      <Route path='/:path' component={NotFound}/>
+      <Route component={NotFound}/>
     </Switch>
   </main>
 )

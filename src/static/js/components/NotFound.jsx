@@ -1,10 +1,9 @@
 // ./src/static/js/components/NotFound.jsx
 import React from 'react'
 
-const NotFound = (props) => (
+const NotFound = () => (
   <div>
     <h1>404 Not Found</h1>
-    <h2>Path: {props.match.params.path}</h2>
   </div>
 )
 
