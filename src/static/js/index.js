@@ -9,5 +9,5 @@ render(
     <BrowserRouter>
         <App />
     </BrowserRouter>,
-    document.getElementById('container')
+    document.getElementById('root')
 )
