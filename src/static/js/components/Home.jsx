@@ -11,16 +11,22 @@ const Home = () => (
       <div className="row flex-center">
         <h1 className="margin-none">Angus Yip</h1>
       </div>
-      <div className="row flex-center">
-        <h3 className="sm-4 col margin-none">I enjoy</h3>
-        <div className="sm-4 col" />
+      <div className="row flex-center margin-none">
+        <div className="col-6 col padding-none">
+          <div className="row margin-none">
+            <h3 className="margin-none">I enjoy</h3>
+          </div>
+        </div>
       </div>
-      <div className="row flex-center">
+      <div className="row flex-center margin-none">
         <h2 className="margin-none">writing code</h2>
       </div>
-      <div className="row flex-center">
-        <div className="sm-4 col" />
-        <h3 className="sm-4 col margin-none">and</h3>
+      <div className="row flex-center margin-none">
+        <div className="col-6 col padding-none">
+          <div className="row flex-right margin-none">
+            <h3 className="margin-none">and</h3>
+          </div>
+        </div>
       </div>
       <div className="row flex-center">
         <h2 className="margin-none">taking pictures</h2>
