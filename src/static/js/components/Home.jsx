@@ -59,8 +59,8 @@ const Home = () => (
       </div>
     </div>
     <div className="row flex-center">
-      <a href="#top" class="paper-btn margin" popover-top="Back to top" style={{'border-radius': "30px"}}>
-        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+      <a href="#top" class="paper-btn margin" popover-top="Back to top" style={{'border-radius': "40px"}}>
+        <i class="fa fa-hand-o-up fa-2x" aria-hidden="true"></i>
       </a>
     </div>
   </div>
