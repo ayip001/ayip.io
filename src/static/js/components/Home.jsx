@@ -29,7 +29,7 @@ const Home = () => (
         </div>
       </div>
       <div className="row flex-center">
-        <h2 className="margin-none">taking pictures</h2>
+        <h2 className="margin-none">taking photos</h2>
       </div>
     </div>
     <div className="section margin-small">
