@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 
 const Home = () => (
   <div>
+    <p>I'll add CSS soon!</p>
     <h2>Hello, my name is</h2>
-    <h1>Angus Yip</h1>
+    <h1 id='name'>Angus Yip</h1>
     <h3>I like to</h3>
     <h2>write code</h2>
     <h3>and</h3>

@@ -3,14 +3,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => (
-  <header>
-    <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
-      </ul>
-    </nav>
-  </header>
+  <div className="row flex-center child-borders margin">
+    <Link to='/' className="paper-btn margin">
+      Home
+    </Link>
+    <Link to='/blog' className="paper-btn margin">
+      Blog
+    </Link>
+  </div>
 )
 
 export default Header

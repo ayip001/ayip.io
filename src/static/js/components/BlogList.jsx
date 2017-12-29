@@ -7,14 +7,16 @@ class BlogList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      posts: [],
+      loading: true
     };
   };
 
   componentDidMount() {
     Client.serve('posts', '1.0', 'all', posts => {
       this.setState({
-        posts: posts
+        posts: posts,
+        loading: false
       });
     });
   };
@@ -23,19 +25,25 @@ class BlogList extends React.Component {
     const { posts } = this.state;
 
     const list = posts.map((post, i) => (
-      <tr>
-        <td><Link to={'/blog/' + post.title}>{post.title}</Link></td>
-        <td>{post.author}</td>
-        <td>{post.date}</td>
-        <td>{post.cover_img_url}</td>
-      </tr>
+      <div className="row flex-center">
+        <div className="card" style={{width: '20rem'}}>
+          <Link to={'/blog/' + post.title}>
+            <div className="card-body">
+              { post.categories.includes("Blog") ?
+                <p className="card-text text-secondary">Blog</p>:
+                <p className="card-text text-success">Project</p> }
+              <h4 className="card-title">{post.title}</h4>
+            </div>
+          <img className="image-bottom" src={post.cover_img_url} alt="Card example image"/>
+          </Link>
+        </div>
+      </div>
     ));
 
     return (
       <div>
-        <ul>
-          { list }
-        </ul>
+        { this.state.loading && <h1>Loading</h1> }
+        { list }
       </div>
     );
   };

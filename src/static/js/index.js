@@ -6,8 +6,12 @@ import App from './components/App'
 import style from '../styles/main.scss'
 
 render(
-    <BrowserRouter>
+  <div className="container">
+    <div className="paper">
+      <BrowserRouter>
         <App />
-    </BrowserRouter>,
-    document.getElementById('root')
+      </BrowserRouter>
+    </div>
+  </div>,
+  document.getElementById('root')
 )
