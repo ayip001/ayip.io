@@ -25,7 +25,7 @@ class BlogList extends React.Component {
     const { posts } = this.state;
 
     const list = posts.map((post, i) => (
-      <div className="row flex-center">
+      <div key={ i } className="row flex-center">
         <Link to={'/blog/' + post.title} className="card" style={{width: '20rem'}}>
           <div className="card-body">
             { post.categories.includes("Blog") ?
