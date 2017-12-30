@@ -34,7 +34,7 @@ class BlogList extends React.Component {
                 <p className="card-text text-success">Project</p> }
               <h4 className="card-title">{post.title}</h4>
             </div>
-          <img className="image-bottom" src={post.cover_img_url} alt="Card example image"/>
+          <img className="image-bottom" src={post.cover_img_url} alt="Loading"/>
           </Link>
         </div>
       </div>
