@@ -61,7 +61,7 @@ const Home = () => (
         <Link to="/blog" className="col-6 col paper-btn btn-block">Blogs and Projects</Link>
       </div>
       <div className="row flex-center">
-        <Link to="#" className="col-6 col paper-btn btn-block">Résumé Download</Link>
+        <a href="https://drive.google.com/file/d/16XK27hQgnkwfmzc7mdgh2DaaK_Eg3UEp/view?usp=sharing" className="col-6 col paper-btn btn-block">Résumé Download</a>
       </div>
     </div>
     <div className="row flex-center">
