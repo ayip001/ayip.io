@@ -1,19 +1,20 @@
 <!-- ./README.md -->
 <h1 align="center"><a href="https://ayip.io">ayip.io</a></h1>
-<h3 align="center">🚧Under construction🚧</h3>
+<h3 align="center">V1.0</h3>
 
-### OwO What's this??
+### What's this??
 ---
-*\*notices personal website\**  
+Angus Yip's personal website
 ### Stuff used to make this
 ---
 * Google App Engine
 * Google Datastore
-* Flask
+* Python Flask
 * Node.js
 * babel
 * ReactJS
 * Webpack
+* Paper-CSS
 ### Setup
 ---
 `make` to setup the python virtual environment and install node modules  
