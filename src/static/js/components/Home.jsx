@@ -54,14 +54,14 @@ const Home = () => (
       </div>
     </div>
     <div className="row">
-      <h3 className="margin-none">Additional links</h3>
+      <h3 className="margin-none">Check out my</h3>
     </div>
     <div className="section">
       <div className="row flex-center">
         <Link to="/blog" className="col-6 col paper-btn btn-block">Blogs and Projects</Link>
       </div>
       <div className="row flex-center">
-        <a href="https://drive.google.com/file/d/16XK27hQgnkwfmzc7mdgh2DaaK_Eg3UEp/view?usp=sharing" className="col-6 col paper-btn btn-block">Résumé Download</a>
+        <a href="https://drive.google.com/file/d/16XK27hQgnkwfmzc7mdgh2DaaK_Eg3UEp/view?usp=sharing" className="col-6 col paper-btn btn-block">Résumé</a>
       </div>
     </div>
     <div className="row flex-center">
