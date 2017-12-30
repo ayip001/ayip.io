@@ -15,6 +15,8 @@ libraries:
   version: latest
 
 skip_files:
+- js/
+- static/js/
 - node_modules/
 - static/node_modules/
 - venv/
