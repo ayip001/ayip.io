@@ -17,7 +17,7 @@ Angus Yip's personal website
 * Paper-CSS
 ### How does it work?
 ---
-![](site-diagram.png)
+![](site-diagram.jpg)
 ### Setup
 ---
 `make` to setup the python virtual environment and install node modules  
