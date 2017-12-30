@@ -2,7 +2,7 @@
 <h1 align="center"><a href="https://ayip.io">ayip.io</a></h1>
 <h3 align="center">V1.0</h3>
 
-### What's this??
+### What is this?
 ---
 Angus Yip's personal website
 ### Stuff used to make this
@@ -15,6 +15,9 @@ Angus Yip's personal website
 * ReactJS
 * Webpack
 * Paper-CSS
+### How does it work?
+---
+![](site-diagram.png)
 ### Setup
 ---
 `make` to setup the python virtual environment and install node modules  
