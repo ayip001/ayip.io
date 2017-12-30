@@ -26,17 +26,15 @@ class BlogList extends React.Component {
 
     const list = posts.map((post, i) => (
       <div className="row flex-center">
-        <div className="card" style={{width: '20rem'}}>
-          <Link to={'/blog/' + post.title}>
-            <div className="card-body">
-              { post.categories.includes("Blog") ?
-                <p className="card-text text-secondary">Blog</p>:
-                <p className="card-text text-success">Project</p> }
-              <h4 className="card-title">{post.title}</h4>
-            </div>
+        <Link to={'/blog/' + post.title} className="card" style={{width: '20rem'}}>
+          <div className="card-body">
+            { post.categories.includes("Blog") ?
+              <p className="card-text text-secondary">Blog</p>:
+              <p className="card-text text-success">Project</p> }
+            <h4 className="card-title text-primary">{post.title}</h4>
+          </div>
           <img className="image-bottom" src={post.cover_img_url} alt="Loading"/>
-          </Link>
-        </div>
+        </Link>
       </div>
     ));
 
