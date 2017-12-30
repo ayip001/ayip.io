@@ -36,7 +36,7 @@ class Post extends React.Component {
 
     const len = post.categories.length;
     const categories = post.categories.map((category, i) => (
-      <span>
+      <span key={ i }>
         { i + 1 === len && len !== 1 && 'and ' }
           <a href="#">{ category }</a>
         { i + 1 !== len && ', ' }
@@ -52,7 +52,7 @@ class Post extends React.Component {
           { ' on ' + post.date.split(' ').slice(0, 4).join(' ') }.
           Posted in { categories }.
         </p>
-        <ReactMarkdown source={post.md}/>
+        <ReactMarkdown source={ post.md }/>
         <div className="row flex-center child-borders margin">
           <Link to='/blog' className="paper-btn margin">
             Back
