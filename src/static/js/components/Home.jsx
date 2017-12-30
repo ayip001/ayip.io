@@ -61,7 +61,7 @@ const Home = () => (
         <Link to="/blog" className="col-6 col paper-btn btn-block">Blogs and Projects</Link>
       </div>
       <div className="row flex-center">
-        <Link to="#" className="col-6 col paper-btn btn-block">Resume Download</Link>
+        <Link to="#" className="col-6 col paper-btn btn-block">Résumé Download</Link>
       </div>
     </div>
     <div className="row flex-center">
