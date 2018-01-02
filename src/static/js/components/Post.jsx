@@ -1,6 +1,7 @@
 // ./src/static/js/components/Post.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
+import ReactDisqusComments from "react-disqus-comments"
 import Client from '../Client'
 import NotFound from './NotFound'
 const ReactMarkdown = require('react-markdown')
@@ -53,6 +54,12 @@ class Post extends React.Component {
           Posted in { categories }.
         </p>
         <ReactMarkdown source={ post.md }/>
+        <ReactDisqusComments
+          shortname={ "ayip-io" }
+          identifier={ post.title }
+          title={ post.title }
+          url={ window.location.href }
+        />
         <div className="row flex-center child-borders margin">
           <Link to='/blog' className="paper-btn margin">
             Back
