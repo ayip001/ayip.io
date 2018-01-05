@@ -22,17 +22,17 @@ const Intro = () => (
       </div>
     </div>
     <div className="row flex-center margin-none">
-      <h2 className="margin-none">writing code</h2>
+      <h2 className="margin-none">developing</h2>
     </div>
     <div className="row flex-center margin-none">
       <div className="col-6 col padding-none">
         <div className="row flex-right margin-none">
-          <h3 className="margin-none">and</h3>
+          <h3 className="margin-none">as well as</h3>
         </div>
       </div>
     </div>
     <div className="row flex-center">
-      <h2 className="margin-none">taking photos</h2>
+      <h2 className="margin-none">photography</h2>
     </div>
   </div>
 )
@@ -76,16 +76,28 @@ const Links = () => (
   </div>
 )
 
-const Home = () => (
-  <div className="row flex-spaces">
-    <div className="sm-12 md-8 col">
-      <Intro />
-    </div>
-    <div className="sm-12 md-4 col">
-      <Links />
-      <Contact />
-    </div>
-  </div>
-)
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  };
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  };
+
+  render() {
+    return (
+      <div className="row flex-spaces">
+        <div className="sm-12 md-8 col">
+          <Intro />
+        </div>
+        <div className="sm-12 md-4 col">
+          <Links />
+          <Contact />
+        </div>
+      </div>
+    );
+  };
+}
 
 export default Home
