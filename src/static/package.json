@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/ayip001/ayip.io#readme",
   "devDependencies": {
+    "animate-scss": "^3.2.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -35,6 +36,7 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
+    "hamburgers": "^0.9.1",
     "node-sass": "^4.7.2",
     "react": "^16.0.0",
     "react-disqus-comments": "^1.1.1",

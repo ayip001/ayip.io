@@ -7,11 +7,9 @@ import style from '../styles/main.scss'
 
 render(
   <div className="container">
-    <div className="paper">
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </div>,
   document.getElementById('root')
 )
