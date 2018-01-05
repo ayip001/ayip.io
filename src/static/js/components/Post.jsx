@@ -45,7 +45,7 @@ class Post extends React.Component {
     ));
 
     return (
-      <div>
+      <div className="paper">
         { this.state.loading && <h1>Loading</h1> }
         <h1>{ post.title }</h1>
         <p className="article-meta">
