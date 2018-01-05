@@ -1,6 +1,9 @@
 // ./src/static/styles/main.scss
+$hamburger-types : (collapse);
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers";
-@import "../node_modules/animate-scss/animate";
+@import "../node_modules/animate-scss/_properties";
+@import "../node_modules/animate-scss/_fading-entrances/_fadeInDown";
+@import "../node_modules/animate-scss/_fading-entrances/_fadeInUpBig";
 
 .avatar {
     height: 250px;
