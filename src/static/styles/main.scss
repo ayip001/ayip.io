@@ -1,9 +1,11 @@
 // ./src/static/styles/main.scss
-$hamburger-types : (collapse);
+$hamburger-types: (collapse);
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 @import "../node_modules/animate-scss/_properties";
 @import "../node_modules/animate-scss/_fading-entrances/_fadeInDown";
 @import "../node_modules/animate-scss/_fading-entrances/_fadeInUpBig";
+
+$BG_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/light-veneer.png";
 
 .avatar {
     height: 250px;
@@ -40,8 +42,13 @@ $hamburger-types : (collapse);
 
 .card {
     @include fadeInUpBig();
+    background: white;
 }
 
 .paper {
     @include fadeInUpBig();
+}
+
+body {
+    background: url($BG_URL);
 }
