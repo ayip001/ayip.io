@@ -9,6 +9,7 @@ threadsafe: true
 handlers:
 - url: /.*
   script: server.server.app
+  secure: always
 
 libraries:
 - name: ssl
