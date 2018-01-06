@@ -6,6 +6,7 @@ $hamburger-types: (collapse);
 @import "../node_modules/animate-scss/_fading-entrances/_fadeInUpBig";
 
 $BG_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/light-veneer.png";
+$PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper.png";
 
 .avatar {
     height: 250px;
@@ -24,7 +25,12 @@ $BG_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/light-veneer.
 
 .menu-item {
     background: white;
+    background: url($PAPER_URL);
     @include fadeInDown();
+}
+
+.paper-btn {
+    background: url($PAPER_URL);
 }
 
 .modal {
@@ -43,10 +49,12 @@ $BG_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/light-veneer.
 .card {
     @include fadeInUpBig();
     background: white;
+    background: url($PAPER_URL);
 }
 
 .paper {
     @include fadeInUpBig();
+    background: url($PAPER_URL);
 }
 
 body {
