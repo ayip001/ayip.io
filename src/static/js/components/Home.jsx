@@ -12,12 +12,12 @@ const Intro = () => (
     </div>
     <img className="row flex-center avatar" src={ PROFILE_PIC_LINK } />
     <div className="row flex-center">
-      <h1 className="margin-none">Angus Yip</h1>
+      <h1 className="margin-none intro">Angus Yip</h1>
     </div>
     <div className="row flex-center margin-none">
       <div className="col-6 col padding-none">
         <div className="row margin-none">
-          <h3 className="margin-none">I enjoy</h3>
+          <h3 className="margin-none intro">I enjoy</h3>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@ const Intro = () => (
     <div className="row flex-center margin-none">
       <div className="col-6 col padding-none">
         <div className="row flex-right margin-none">
-          <h3 className="margin-none" style={{'white-space':'nowrap'}}>as well as</h3>
+          <h3 className="margin-none intro">as well as</h3>
         </div>
       </div>
     </div>

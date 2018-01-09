@@ -9,8 +9,8 @@ $BG_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/light-veneer.
 $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper.png";
 
 .avatar {
-    height: 250px;
     width: 250px;
+    height: auto;
 }
 
 .burger-menu {
@@ -23,14 +23,20 @@ $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper
     z-index: 10;
 }
 
+.card {
+    @include fadeInUpBig();
+    background: white;
+    background: url($PAPER_URL);
+}
+
+.intro {
+    white-space: nowrap;
+}
+
 .menu-item {
     background: white;
     background: url($PAPER_URL);
     @include fadeInDown();
-}
-
-.paper-btn {
-    background: url($PAPER_URL);
 }
 
 .modal {
@@ -46,14 +52,12 @@ $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.card {
+.paper {
     @include fadeInUpBig();
-    background: white;
     background: url($PAPER_URL);
 }
 
-.paper {
-    @include fadeInUpBig();
+.paper-btn {
     background: url($PAPER_URL);
 }
 
