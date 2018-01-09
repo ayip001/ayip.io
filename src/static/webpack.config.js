@@ -24,10 +24,10 @@ const config = {
         exclude: /node_modules/,
         use: 'babel-loader'
       },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: 'file-loader'
-      },
+//      {
+//        test: /\.(png|svg|jpg|gif|jpeg)$/,
+//        use: 'file-loader'
+//      },
       {
         test: /\.scss$/,
         use: extractSass.extract({
