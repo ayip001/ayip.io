@@ -27,7 +27,7 @@ const Intro = () => (
     <div className="row flex-center margin-none">
       <div className="col-6 col padding-none">
         <div className="row flex-right margin-none">
-          <h3 className="margin-none">as well as</h3>
+          <h3 className="margin-none" style={{'white-space':'nowrap'}}>as well as</h3>
         </div>
       </div>
     </div>
