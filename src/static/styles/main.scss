@@ -29,6 +29,11 @@ $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper
     background: url($PAPER_URL);
 }
 
+.card-read-more {
+    float: right;
+    margin: 0;
+}
+
 .intro {
     white-space: nowrap;
 }
