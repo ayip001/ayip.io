@@ -5,8 +5,17 @@ $hamburger-types: (collapse);
 @import "../node_modules/animate-scss/_fading-entrances/_fadeInDown";
 @import "../node_modules/animate-scss/_fading-entrances/_fadeInUpBig";
 
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+
 $BG_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/light-veneer.png";
 $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper.png";
+$STICKY_COLORS:
+  #fffeaa, // yellow
+  #ff7455, // orange
+  #ff0079, // pink
+  #7afcff, // blue
+  #dcff46; // green
+$NUM_STICKY_COLORS: length($STICKY_COLORS);
 
 .avatar {
     width: 250px;
@@ -21,6 +30,13 @@ $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper
     top: 1em;
     right: 1em;
     z-index: 10;
+}
+
+.btn-block {
+    height: 100px;
+    padding-top: 20px;
+//    padding-bottom: 40px;
+    text-align: center;
 }
 
 .card {
@@ -39,8 +55,7 @@ $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper
 }
 
 .menu-item {
-    background: white;
-    background: url($PAPER_URL);
+    background: url($PAPER_URL) !important;
     @include fadeInDown();
 }
 
@@ -63,7 +78,37 @@ $PAPER_URL: "https://www.toptal.com/designers/subtlepatterns/patterns/linedpaper
 }
 
 .paper-btn {
-    background: url($PAPER_URL);
+    @for $i from 1 to $NUM_STICKY_COLORS + 1 {
+        &:nth-child(#{$NUM_STICKY_COLORS}n + #{$i}) {
+            background-color: nth($STICKY_COLORS, $i);
+        }
+        &-#{$i} {
+            background-color: nth($STICKY_COLORS, $i) !important;
+        }
+    }
+    &-plain {
+        background: url($PAPER_URL) !important;
+    }
+}
+
+.reading {
+    & p {
+        font-family: 'Cardo', serif;
+    }
+    & span {
+        font-family: 'Cardo', serif;
+    }
+    & li {
+        font-family: 'Cardo', serif;
+    }
+    & a {
+        font-family: 'Cardo', serif;
+    }
+    @for $i from 1 to 7 {
+        & h#{$i} {
+            font-family: 'Cardo', serif;
+        }
+    }
 }
 
 body {

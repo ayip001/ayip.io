@@ -7,17 +7,27 @@ import BlogList from './BlogList'
 import Post from './Post'
 import NotFound from './NotFound'
 
+const FONTS = ["default", "reading"]
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.state = {
-      showMenu: false
+      showMenu: false,
+      font: 0
     };
   };
 
+  toggleFont() {
+    this.setState({font: (this.state.font + 1 === FONTS.length?
+      0 :
+      this.state.font + 1
+    )});
+  };
+
   toggleMenu() {
-    this.setState({ showMenu: !this.state.showMenu});
+    this.setState({showMenu: !this.state.showMenu});
   };
 
   render() {

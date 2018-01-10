@@ -62,7 +62,7 @@ class Post extends React.Component {
           url={ window.location.href }
         />
         <div className="row flex-center child-borders margin">
-          <Link to='/blog' className="paper-btn margin">
+          <Link to='/blog' className="paper-btn paper-btn-plain margin">
             Back
           </Link>
         </div>

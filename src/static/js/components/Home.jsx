@@ -67,11 +67,9 @@ const Links = () => (
     <div className="row">
       <h3 className="margin-none">Check out my</h3>
     </div>
-    <div className="row flex-center">
-      <Link to="/blog" className="col-6 col paper-btn btn-block">Blogs & Projects</Link>
-    </div>
-    <div className="row flex-center">
-      <a href={ RESUME_LINK } className="col-6 col paper-btn btn-block">Résumé</a>
+    <div className="row flex-center child-borders">
+      <Link to="/blog" className="col-6 col paper-btn paper-btn-3 btn-block margin">Blogs & Projects</Link>
+      <a href={ RESUME_LINK } className="col-6 col paper-btn paper-btn-1 btn-block margin">Résumé</a>
     </div>
   </div>
 )
