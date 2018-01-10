@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "extends": ["eslint:all", "plugin:react/all"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "one-var": [2, {
+      "const": "never"
+    }],
+    "padded-blocks": [2, {
+      "blocks": "never"
+    }]
+  }
+}

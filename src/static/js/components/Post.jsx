@@ -18,7 +18,7 @@ class Post extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    Client.serve('posts', '1.0', 'post/' + this.state.title, post => {
+    Client.serve('posts', 'post/' + this.state.title, post => {
       this.setState({
         post: post,
         loading: false

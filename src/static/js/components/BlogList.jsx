@@ -13,7 +13,7 @@ class BlogList extends React.Component {
   };
 
   componentDidMount() {
-    Client.serve('posts', '1.0', 'all', posts => {
+    Client.serve('posts', 'all', posts => {
       this.setState({
         posts: posts,
         loading: false
