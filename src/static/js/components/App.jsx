@@ -7,50 +7,23 @@ import BlogList from './BlogList'
 import Post from './Post'
 import NotFound from './NotFound'
 
-const FONTS = ["default", "reading"]
-
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.toggleMenu = this.toggleMenu.bind(this);
+  constructor() {
+    super();
     this.state = {
       showMenu: false,
-      font: 0
+      readingFont: false
     };
-  };
-
-  toggleFont() {
-    this.setState({font: (this.state.font + 1 === FONTS.length?
-      0 :
-      this.state.font + 1
-    )});
-  };
-
-  toggleMenu() {
-    this.setState({showMenu: !this.state.showMenu});
   };
 
   render() {
     return (
-      <div>
-        { /* begin burger menu */ }
-        <div
-          className={this.state.showMenu ? "burger-menu hamburger hamburger--collapse is-active" : "burger-menu hamburger hamburger--collapse"}
-          onClick={ this.toggleMenu }
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner"></span>
-          </span>
-        </div>
-        { /* end burger menu */ }
-        { // modal header
-          this.state.showMenu &&
-          <div className="modal" onClick={ this.toggleMenu }>
-            <Header />
-          </div>
-        }
-        { /* if not home, show header at top of page */ }
-        {window.location.pathname !== '/' && <Header />}
+      <div className={this.state.readingFont ? "reading" : ""}>
+        <Header
+          showMenu={ this.state.showMenu }
+          toggleMenu={(showMenu) => this.setState({showMenu})}
+          readingFont={ this.state.readingFont }
+          toggleFont={(readingFont) => this.setState({readingFont})} />
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/blog' component={BlogList}/>

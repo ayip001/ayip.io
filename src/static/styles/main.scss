@@ -50,12 +50,18 @@ $NUM_STICKY_COLORS: length($STICKY_COLORS);
     margin: 0;
 }
 
+.font-btn {
+    height: 150px;
+    width: 150px;
+    padding: 35px;
+    text-align: center;
+}
+
 .intro {
     white-space: nowrap;
 }
 
 .menu-item {
-    background: url($PAPER_URL) !important;
     @include fadeInDown();
 }
 
@@ -104,9 +110,13 @@ $NUM_STICKY_COLORS: length($STICKY_COLORS);
     & a {
         font-family: 'Cardo', serif;
     }
+    & html {
+        font-family: 'Cardo', serif;
+    }
     @for $i from 1 to 7 {
         & h#{$i} {
             font-family: 'Cardo', serif;
+            font-size: #{0.5 + 2.5 / $i}rem;
         }
     }
 }
