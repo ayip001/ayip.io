@@ -33,6 +33,10 @@ server:
 watch:
 	$(NODE_PKGMGR) $(NODE_DIR) run watch
 
+deploy:
+	$(NODE_PKGMGR) $(NODE_DIR) run build
+	gcloud app deploy src/app.yaml
+
 fclean:
 	rm -rf $(VENV_DIR) $(NODE_DIR)/node_modules $(REQ_DIR)lib
 
