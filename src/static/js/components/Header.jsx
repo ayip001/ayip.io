@@ -25,7 +25,7 @@ const FontButton = ({readingFont, toggleFont}) => (
       <div
         className="paper-btn paper-btn-4 font-btn"
         onClick={() => toggleFont(!readingFont)}>
-        Boring font for reading
+        Reading font if you want
       </div>}
   </div>
 )
