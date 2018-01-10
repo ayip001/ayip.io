@@ -7,6 +7,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /favicon\.ico
+  static_files: static/resources/favicon.ico
+  upload: static/resources/favicon\.ico
 - url: /.*
   script: server.server.app
   secure: always
