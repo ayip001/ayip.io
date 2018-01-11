@@ -1,38 +1,74 @@
 // ./src/static/js/components/App.jsx
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Home from './Home'
-import Header from './Header'
-import BlogList from './BlogList'
-import Post from './Post'
-import NotFound from './NotFound'
+import {Route, Switch} from "react-router-dom";
+import BlogList from "./BlogList";
+import Header from "./Header";
+import Home from "./Home";
+import NotFound from "./NotFound";
+import Post from "./Post";
+import React from "react";
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      showMenu: false,
-      readingFont: false
-    };
-  };
 
-  render() {
-    return (
-      <div className={this.state.readingFont ? "reading" : ""}>
-        <Header
-          showMenu={ this.state.showMenu }
-          toggleMenu={(showMenu) => this.setState({showMenu})}
-          readingFont={ this.state.readingFont }
-          toggleFont={(readingFont) => this.setState({readingFont})} />
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/blog' component={BlogList}/>
-          <Route path='/blog/:title' component={Post}/>
-          <Route component={NotFound}/>
-        </Switch>
-      </div>
-    );
-  };
+    static shouldComponentUpdate () {
+        return true;
+    }
+
+    constructor () {
+        super();
+        this.state = {
+            "className": "",
+            "readingFont": false,
+            "showMenu": false
+        };
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.toggleFont = this.toggleFont.bind(this);
+    }
+
+    toggleMenu (showMenu) {
+        this.setState({showMenu});
+    }
+
+    toggleFont (readingFont) {
+        this.setState({readingFont});
+        if (readingFont) {
+            this.setState({"className": "reading"});
+        } else {
+            this.setState({"className": ""});
+        }
+    }
+
+    render () {
+        const {className, readingFont, showMenu} = this.state;
+
+        return (
+            <div className={className}>
+                <Header
+                    readingFont={readingFont}
+                    showMenu={showMenu}
+                    toggleFont={this.toggleFont}
+                    toggleMenu={this.toggleMenu}
+                />
+                <Switch>
+                    <Route
+                        component={Home}
+                        exact
+                        path="/"
+                    />
+                    <Route
+                        component={BlogList}
+                        exact
+                        path="/blog"
+                    />
+                    <Route
+                        component={Post}
+                        path="/blog/:title"
+                    />
+                    <Route component={NotFound} />
+                </Switch>
+            </div>
+        );
+    }
+
 }
 
-export default App
+export default App;

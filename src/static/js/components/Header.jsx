@@ -1,73 +1,103 @@
 // ./src/static/js/components/Header.jsx
-import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from "react-router-dom";
+import React from "react";
 
-const BurgerMenu = ({showMenu, toggleMenu}) => (
-  <div
-    className={showMenu ?
-      "burger-menu hamburger hamburger--collapse is-active" :
-      "burger-menu hamburger hamburger--collapse"}
-    onClick={() => toggleMenu(!showMenu)}>
-    <span className="hamburger-box">
-      <span className="hamburger-inner" />
-    </span>
-  </div>
-)
+const BurgerMenu = ({showMenu, toggleMenu}) => {
+    let className = null;
 
-const FontButton = ({readingFont, toggleFont}) => (
-  <div className="row flex-center">
-    { readingFont ?
-      <div
-        className="paper-btn paper-btn-2 font-btn"
-        onClick={() => toggleFont(!readingFont)}>
-        Aesthetic font for croissant
-      </div> :
-      <div
-        className="paper-btn paper-btn-4 font-btn"
-        onClick={() => toggleFont(!readingFont)}>
-        Reading font if you want
-      </div>}
-  </div>
-)
+    if (showMenu) {
+        className = "burger-menu hamburger hamburger--collapse is-active";
+    } else {
+        className = "burger-menu hamburger hamburger--collapse";
+    }
+
+    return (
+        <div
+            className={className}
+            onClick={() => toggleMenu(!showMenu)}
+        >
+            <span className="hamburger-box">
+                <span className="hamburger-inner" />
+            </span>
+        </div>
+    );
+};
+
+const FontButton = ({readingFont, toggleFont}) => {
+    let buttonTxt = null,
+        className = null;
+
+    if (readingFont) {
+        buttonTxt = "Aesthetic font for croissant";
+        className = "paper-btn paper-btn-2 font-btn";
+    } else {
+        buttonTxt = "Reading font if you want";
+        className = "paper-btn paper-btn-4 font-btn";
+    }
+
+    return (
+        <div className="row flex-center">
+            <div
+                className={className}
+                onClick={() => toggleFont(!readingFont)}
+            >
+                {buttonTxt}
+            </div>
+        </div>
+    );
+};
 
 const Menu = () => (
-  <div className="row flex-center child-borders margin">
-    <Link to='/' className="paper-btn paper-btn-plain margin">
-      Home
-    </Link>
-    <Link to='/blog' className="paper-btn paper-btn-plain margin">
-      Blog
-    </Link>
-  </div>
-)
+    <div className="row flex-center child-borders margin">
+        <Link
+            className="paper-btn paper-btn-plain margin"
+            to="/"
+        >
+            Home
+        </Link>
+        <Link
+            className="paper-btn paper-btn-plain margin"
+            to="/blog"
+        >
+            Blog
+        </Link>
+    </div>
+);
 
-const ModalMenu = ({showMenu, toggleMenu, readingFont, toggleFont}) => (
-  <div>
-    {showMenu &&
-      <div className="modal" onClick={() => toggleMenu(!showMenu)}>
-        <div className="menu-item">
-          <Menu />
-          <FontButton
-            readingFont={readingFont}
-            toggleFont={toggleFont} />
-        </div>
-      </div>}
-  </div>
-)
+const ModalMenu = ({showMenu, toggleMenu, readingFont, toggleFont}) => {
+    if (showMenu) {
+        return (
+            <div
+                className="modal"
+                onClick={() => toggleMenu(!showMenu)}
+            >
+                <div className="menu-item">
+                    <Menu />
+                    <FontButton
+                        readingFont={readingFont}
+                        toggleFont={toggleFont}
+                    />
+                </div>
+            </div>
+        );
+    }
+    return <div />;
+};
 
 const Header = ({showMenu, toggleMenu, readingFont, toggleFont}) => (
-  <div>
-    <BurgerMenu
-      showMenu={ showMenu }
-      toggleMenu={ toggleMenu } />
-    <ModalMenu
-      showMenu={ showMenu }
-      toggleMenu={ toggleMenu }
-      readingFont={ readingFont }
-      toggleFont={ toggleFont } />
-    { /* if not home, show header at top of page */ }
-    {window.location.pathname !== '/' && <Menu />}
-  </div>
-)
+    <div>
+        <BurgerMenu
+            showMenu={showMenu}
+            toggleMenu={toggleMenu}
+        />
+        <ModalMenu
+            readingFont={readingFont}
+            showMenu={showMenu}
+            toggleFont={toggleFont}
+            toggleMenu={toggleMenu}
+        />
+        {window.location.pathname !== "/" && <Menu />}
+    </div>
+);
 
-export default Header
+export default Header;
