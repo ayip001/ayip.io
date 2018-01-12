@@ -3,10 +3,17 @@ import Client from "../Client";
 import {Link} from "react-router-dom";
 import NotFound from "./NotFound";
 import React from "react";
-import ReactDisqusComments from "react-disqus-comments";
+//import ReactDisqusComments from "react-disqus-comments";
 import ReactMarkdown from "react-markdown";
 
 class Post extends React.Component {
+    componentDidMount () {
+        window.scrollTo(0, 0);
+        Client.serve("posts", `post/${this.state.title}`, (post) => {
+            this.setState({post});
+        });
+    }
+
     constructor (props) {
         super(props);
         this.state = {
@@ -17,13 +24,6 @@ class Post extends React.Component {
             },
             "title": this.props.match.params.title
         };
-    }
-
-    componentDidMount () {
-        window.scrollTo(0, 0);
-        Client.serve("posts", `post/${this.state.title}`, (post) => {
-            this.setState({post});
-        });
     }
 
     render () {
@@ -61,12 +61,14 @@ class Post extends React.Component {
                     {"."}
                 </p>
                 <ReactMarkdown source={post.md} />
+                {/*
                 <ReactDisqusComments
                     identifier={post.title}
                     shortname="ayip-io"
                     title={post.title}
                     url={window.location.href}
                 />
+                */}
                 <div className="row flex-center child-borders margin">
                     <Link
                         className="paper-btn paper-btn-plain margin"
