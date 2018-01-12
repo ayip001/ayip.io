@@ -50,6 +50,10 @@ $NUM_STICKY_COLORS: length($STICKY_COLORS);
     margin: 0;
 }
 
+.copyright {
+    text-align: center;
+}
+
 .font-btn {
     height: 150px;
     width: 150px;
@@ -111,6 +115,9 @@ $NUM_STICKY_COLORS: length($STICKY_COLORS);
         font-family: 'Cardo', serif;
     }
     & html {
+        font-family: 'Cardo', serif;
+    }
+    & div {
         font-family: 'Cardo', serif;
     }
     @for $i from 1 to 7 {
