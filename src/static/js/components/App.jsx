@@ -39,6 +39,13 @@ class App extends React.Component {
 
     render () {
         const {className, readingFont, showMenu} = this.state;
+        const copyright = (
+            <div className="row flex-center">
+                <div className="col-6 text-muted copyright">
+                    {"Copyright 2018 by Angus Yip. Designed by my leftover pizza."}
+                </div>
+            </div>
+        );
 
         return (
             <div className={className}>
@@ -65,6 +72,7 @@ class App extends React.Component {
                     />
                     <Route component={NotFound} />
                 </Switch>
+                {copyright}
             </div>
         );
     }

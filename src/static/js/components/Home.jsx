@@ -17,7 +17,7 @@ class Home extends React.Component {
         window.scrollTo(0, 0);
     }
 
-    static render () {
+    render () {
         const intro = (
             <div className="paper">
                 <div className="row">
